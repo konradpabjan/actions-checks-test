@@ -3,6 +3,8 @@ const github = require("@actions/github");
 
 const { GITHUB_TOKEN, GITHUB_SHA } = process.env;
 
+const octokit = new github.GitHub(GITHUB_TOKEN);
+
 async function createCheck() {
     const { data } = await octokit.checks.create({
         ...github.context.repo,
