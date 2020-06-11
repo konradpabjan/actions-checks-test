@@ -65,6 +65,18 @@ async function run(){
     await delay(15000);
 
     console.log("done with the long sleep")
+
+    await delay(15000);
+
+    console.log("done with the long sleep")
+
+    await delay(15000);
+
+    console.log("done with the long sleep")
+
+    await delay(15000);
+
+    console.log("done with the long sleep")
 }
 
 run().catch(error => {
