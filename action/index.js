@@ -1,5 +1,5 @@
-const core = require("@actions/core");
-const github = require("@actions/github");
+const core = require("./node_modules/@actions/core");
+const github = require(".node_modules/@actions/github");
 
 const { GITHUB_TOKEN, GITHUB_SHA } = process.env;
 
