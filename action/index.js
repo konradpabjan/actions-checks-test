@@ -50,7 +50,7 @@ async function run(){
               conclusion === "failure"
                 ? "🚫 **Broken internal links found**"
                 : "✅ **All interal links are working!**",
-            text: String(output)
+            text: "some text"
           }
         )
     });
