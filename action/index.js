@@ -14,16 +14,21 @@ async function createCheck() {
         head_sha: GITHUB_SHA,
         owner: "konradpabjan",
         repo: "actions-checks-test",
-        status: "in_progress",
+        status: "completed",
         started_at: new Date()
     });
 
     console.log(data)
 }
 
+
 async function run(){
     console.log("this is running!")
     createCheck()
+
+    await new Promise(r => setTimeout(r, 10000));
+    
+    console.log("we are done!")
 }
 
 run().catch(error => {
