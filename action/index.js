@@ -4,11 +4,9 @@ const github = require("./node_modules/@actions/github");
 const { GITHUB_TOKEN, GITHUB_SHA } = process.env;
 
 const CHECK_NAME = "build";
+const octokit = github.getOctokit(GITHUB_TOKEN)
 
 async function createCheck() {
-
-    const octokit = github.getOctokit(GITHUB_TOKEN)
-
     const { data } = await octokit.checks.create({
         name: CHECK_NAME,
         head_sha: GITHUB_SHA,
