@@ -7,6 +7,7 @@ const CHECK_NAME = "build";
 const octokit = github.getOctokit(GITHUB_TOKEN)
 
 async function createCheck(): Promise<number> {
+    console.log("Creating a check suite")
     const { data } = await octokit.checks.create({
         name: CHECK_NAME,
         head_sha: GITHUB_SHA,

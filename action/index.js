@@ -55,14 +55,16 @@ function createCheck() {
         var data;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, octokit.checks.create({
-                        name: CHECK_NAME,
-                        head_sha: GITHUB_SHA,
-                        owner: "konradpabjan",
-                        repo: "actions-checks-test",
-                        status: "completed",
-                        started_at: new Date()
-                    })];
+                case 0:
+                    console.log("Creating a check suite");
+                    return [4 /*yield*/, octokit.checks.create({
+                            name: CHECK_NAME,
+                            head_sha: GITHUB_SHA,
+                            owner: "konradpabjan",
+                            repo: "actions-checks-test",
+                            status: "in_progress",
+                            started_at: new Date()
+                        })];
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
@@ -95,6 +97,7 @@ function run() {
                     id = _a.sent();
                     console.log("id is " + id);
                     conclusion = "failure";
+                    console.log;
                     return [4 /*yield*/, updateCheck(id, {
                             conclusion: conclusion,
                             status: "completed",
