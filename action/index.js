@@ -119,6 +119,18 @@ function run() {
                 case 3:
                     _a.sent();
                     console.log("done with the long sleep");
+                    return [4 /*yield*/, delay(15000)];
+                case 4:
+                    _a.sent();
+                    console.log("done with the long sleep");
+                    return [4 /*yield*/, delay(15000)];
+                case 5:
+                    _a.sent();
+                    console.log("done with the long sleep");
+                    return [4 /*yield*/, delay(15000)];
+                case 6:
+                    _a.sent();
+                    console.log("done with the long sleep");
                     return [2 /*return*/];
             }
         });
