@@ -34,7 +34,8 @@ async function updateCheck(id, checkResults) {
 
 async function run(){
     console.log("this is running!")
-    const id = createCheck()
+    const id = await createCheck()
+    console.log("id is " + id)
     const conclusion = "success"
 
     await updateCheck(id, {
