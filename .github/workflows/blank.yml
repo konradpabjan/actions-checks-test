@@ -28,3 +28,5 @@ jobs:
 
     - name: You should not write actions like this
       uses: ./action
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
