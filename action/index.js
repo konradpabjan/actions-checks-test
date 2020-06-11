@@ -3,6 +3,8 @@ const github = require("./node_modules/@actions/github");
 
 const { GITHUB_TOKEN, GITHUB_SHA } = process.env;
 
+const CHECK_NAME = "Check Broken Links";
+
 async function createCheck() {
 
     const octokit = github.getOctokit(GITHUB_TOKEN)
