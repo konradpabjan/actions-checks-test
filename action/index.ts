@@ -22,6 +22,10 @@ async function createCheck(): Promise<number> {
     return Number(data.id)
 }
 
+function delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
+
 async function updateCheck(id, checkResults) {
     await octokit.checks.update({
         owner: "konradpabjan",
@@ -57,6 +61,10 @@ async function run(){
     });
 
     console.log("we are done!")
+
+    await delay(15000);
+
+    console.log("done with the long sleep")
 }
 
 run().catch(error => {

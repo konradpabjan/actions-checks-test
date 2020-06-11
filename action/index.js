@@ -73,6 +73,9 @@ function createCheck() {
         });
     });
 }
+function delay(ms) {
+    return new Promise(function (resolve) { return setTimeout(resolve, ms); });
+}
 function updateCheck(id, checkResults) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -112,6 +115,10 @@ function run() {
                 case 2:
                     _a.sent();
                     console.log("we are done!");
+                    return [4 /*yield*/, delay(15000)];
+                case 3:
+                    _a.sent();
+                    console.log("done with the long sleep");
                     return [2 /*return*/];
             }
         });
