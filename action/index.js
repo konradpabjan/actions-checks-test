@@ -3,7 +3,7 @@ const github = require("./node_modules/@actions/github");
 
 const { GITHUB_TOKEN, GITHUB_SHA } = process.env;
 
-const CHECK_NAME = "Check Broken Links";
+const CHECK_NAME = "build";
 
 async function createCheck() {
 
