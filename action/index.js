@@ -57,7 +57,7 @@ async function run(){
     console.log("we are done!")
 }
 
-await run().catch(error => {
+run().catch(error => {
     console.log(error);
     core.setFailed(error.message);
 });
