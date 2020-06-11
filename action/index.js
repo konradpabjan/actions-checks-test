@@ -19,15 +19,42 @@ async function createCheck() {
     });
 
     console.log(data)
+
+    return data.id
 }
+
+async function updateCheck(id, checkResults) {
+    await octokit.checks.update({
+        owner: "konradpabjan",
+        repo: "actions-checks-test",
+        ...checkResults,
+        name: CHECK_NAME,
+        check_run_id: id
+    });
+  }
 
 
 async function run(){
     console.log("this is running!")
-    createCheck()
+    const id = createCheck()
+    const conclusion = "success"
 
-    await new Promise(r => setTimeout(r, 10000));
-    
+    await updateCheck(id, {
+        conclusion,
+        status: "completed",
+        output: Object.assign(
+          {},
+          {
+            title: "Broken Links Check",
+            summary:
+              conclusion === "failure"
+                ? "🚫 **Broken internal links found**"
+                : "✅ **All interal links are working!**",
+            text: String(output)
+          }
+        )
+    });
+
     console.log("we are done!")
 }
 
