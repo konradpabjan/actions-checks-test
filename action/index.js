@@ -36,7 +36,7 @@ async function run(){
     console.log("this is running!")
     const id = await createCheck()
     console.log("id is " + id)
-    const conclusion = "success"
+    const conclusion = "failure"
 
     await updateCheck(id, {
         conclusion,
@@ -57,7 +57,7 @@ async function run(){
     console.log("we are done!")
 }
 
-run().catch(error => {
+await run().catch(error => {
     console.log(error);
     core.setFailed(error.message);
 });
