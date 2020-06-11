@@ -8,9 +8,10 @@ async function createCheck() {
     const octokit = github.getOctokit(GITHUB_TOKEN)
 
     const { data } = await octokit.checks.create({
-        ...github.context.repo,
         name: CHECK_NAME,
         head_sha: GITHUB_SHA,
+        owner: "konradpabjan",
+        repo: "actions-checks-test",
         status: "in_progress",
         started_at: new Date()
     });
