@@ -41,24 +41,6 @@ async function run(){
     console.log("this is running!")
     const id = await createCheck()
     console.log("id is " + id)
-    const conclusion = "failure"
-
-    console.log
-    await updateCheck(id, {
-        conclusion,
-        status: "completed",
-        output: Object.assign(
-          {},
-          {
-            title: "Broken Links Check",
-            summary:
-              conclusion === "failure"
-                ? "🚫 **Broken internal links found**"
-                : "✅ **All interal links are working!**",
-            text: "some text"
-          }
-        )
-    });
 
     console.log("we are done!")
 
