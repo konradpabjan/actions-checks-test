@@ -90,7 +90,7 @@ function updateCheck(id, checkResults) {
 }
 function run() {
     return __awaiter(this, void 0, void 0, function () {
-        var id;
+        var id, conclusion;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -99,6 +99,7 @@ function run() {
                 case 1:
                     id = _a.sent();
                     console.log("id is " + id);
+                    conclusion = "failure";
                     console.log("we are done!");
                     return [4 /*yield*/, delay(15000)];
                 case 2:
@@ -107,13 +108,27 @@ function run() {
                     return [4 /*yield*/, delay(15000)];
                 case 3:
                     _a.sent();
-                    console.log("done with the long sleep");
-                    return [4 /*yield*/, delay(15000)];
+                    console.log;
+                    return [4 /*yield*/, updateCheck(id, {
+                            conclusion: conclusion,
+                            status: "completed",
+                            output: Object.assign({}, {
+                                title: "Broken Links Check",
+                                summary: conclusion === "failure"
+                                    ? "🚫 **Broken internal links found**"
+                                    : "✅ **All interal links are working!**",
+                                text: "some text"
+                            })
+                        })];
                 case 4:
                     _a.sent();
                     console.log("done with the long sleep");
                     return [4 /*yield*/, delay(15000)];
                 case 5:
+                    _a.sent();
+                    console.log("done with the long sleep");
+                    return [4 /*yield*/, delay(15000)];
+                case 6:
                     _a.sent();
                     console.log("done with the long sleep");
                     return [2 /*return*/];
