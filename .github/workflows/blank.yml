@@ -25,8 +25,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo Hello, world!
-
-    - name: You should not write actions like this
-      uses: ./action
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+    - name: Sleep
+      run: |
+        sleep 10
+        echo "We are done"
