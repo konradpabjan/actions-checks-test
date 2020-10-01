@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/konradpabjan/actions-checks-test#readme",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "@actions/github": "^3.0.0"
   }
 }
