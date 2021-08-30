@@ -14,7 +14,7 @@ jobs:
           script: |
             github.checks.create({
                 name: 'My check name',
-                head_sha: '${{github.GITHUB_SHA}}',
+                head_sha: '${{github.sha}}',
                 owner: "konradpabjan",
                 repo: "actions-checks-test",
                 status: "in_progress",
