@@ -1,0 +1,23 @@
+
+name: Test Manual Check Run
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/github-script@v4
+        with:
+          script: |
+            github.checks.create({
+                name: CHECK_NAME,
+                head_sha: GITHUB_SHA,
+                owner: "konradpabjan",
+                repo: "actions-checks-test",
+                status: "in_progress",
+                started_at: new Date()
+            });
+
