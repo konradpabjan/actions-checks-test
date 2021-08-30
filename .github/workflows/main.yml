@@ -13,8 +13,8 @@ jobs:
         with:
           script: |
             github.checks.create({
-                name: CHECK_NAME,
-                head_sha: GITHUB_SHA,
+                name: 'My check name',
+                head_sha: '${{env.GITHUB_SHA}}',
                 owner: "konradpabjan",
                 repo: "actions-checks-test",
                 status: "in_progress",
