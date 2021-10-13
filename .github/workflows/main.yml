@@ -9,11 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/github-script@v4
+      - name: Create a non-actions check run
+        uses: actions/github-script@v4
         with:
           script: |
             github.checks.create({
-                name: 'My check name',
+                name: 'My check name 🍎',
                 head_sha: '${{github.sha}}',
                 owner: "konradpabjan",
                 repo: "actions-checks-test",
