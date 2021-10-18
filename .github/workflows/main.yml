@@ -18,7 +18,7 @@ jobs:
                 head_sha: '${{github.sha}}',
                 owner: "konradpabjan",
                 repo: "actions-checks-test",
-                status: "failed",
+                status: "waiting",
                 started_at: new Date()
             });
 
