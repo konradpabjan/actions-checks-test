@@ -4,6 +4,7 @@ name: Test Manual Check Run
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -19,7 +20,8 @@ jobs:
                 head_sha: '${{github.sha}}',
                 owner: "konradpabjan",
                 repo: "actions-checks-test",
-                status: "failure",
+                status: "completed",
+                conclusion: "failure"
                 started_at: new Date()
             });
 
