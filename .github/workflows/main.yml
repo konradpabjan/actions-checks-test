@@ -22,6 +22,10 @@ jobs:
                 repo: "actions-checks-test",
                 status: "completed",
                 conclusion: "failure",
+                output: {
+                  title: 'output title',
+                  body: 'this is the body of the check run'
+                },
                 started_at: new Date()
             });
 
