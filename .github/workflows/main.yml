@@ -24,7 +24,7 @@ jobs:
                 conclusion: "failure",
                 output: {
                   title: 'output title',
-                  body: 'this is the body of the check run'
+                  summary: 'this is the summary of the check run that users can make whatever'
                 },
                 started_at: new Date()
             });
