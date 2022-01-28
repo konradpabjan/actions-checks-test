@@ -21,7 +21,7 @@ jobs:
                 owner: "konradpabjan",
                 repo: "actions-checks-test",
                 status: "completed",
-                conclusion: "failed"
+                conclusion: "failure",
                 started_at: new Date()
             });
 
