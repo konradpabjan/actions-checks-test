@@ -24,7 +24,7 @@ jobs:
                 conclusion: "failure",
                 output: {
                   title: 'output title',
-                  summary: 'this is the summary of the check run that users can make whatever\n\n#Markdown content\n- some content'
+                  summary: 'this is the summary of the check run that users can make whatever\n\n# Markdown content\n- some content\n- more content'
                 },
                 started_at: new Date()
             });
