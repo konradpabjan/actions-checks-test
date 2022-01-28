@@ -2,6 +2,7 @@
 name: Test Manual Check Run
 
 on:
+  push:
   pull_request:
 
 jobs:
