@@ -18,10 +18,10 @@ jobs:
             github.checks.create({
                 name: 'Custom output',
                 head_sha: '${{github.sha}}',
-                owner: "konradpabjan",
-                repo: "actions-checks-test",
-                status: "completed",
-                conclusion: "failure",
+                owner: 'konradpabjan',
+                repo: 'actions-checks-test",
+                status: 'completed',
+                conclusion: 'failure',
                 output: {
                   title: 'My Custom Mardkown Content',
                   summary: '### Hello World! :rocket:'
