@@ -19,7 +19,7 @@ jobs:
                 name: 'Custom output',
                 head_sha: '${{github.sha}}',
                 owner: 'konradpabjan',
-                repo: 'actions-checks-test",
+                repo: 'actions-checks-test',
                 status: 'completed',
                 conclusion: 'failure',
                 output: {
