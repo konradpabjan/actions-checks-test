@@ -18,7 +18,7 @@ jobs:
             github.checks.create({
                 name: 'Custom output',
                 head_sha: '${{github.sha}}',
-                owner: 'konradpabjan',
+                owner: '${{github.repository_owner}}',
                 repo: 'actions-checks-test',
                 status: 'completed',
                 conclusion: 'failure',
