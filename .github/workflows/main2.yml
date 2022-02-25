@@ -1,5 +1,5 @@
 
-name: Test Manual Check Run
+name: Manual Check Run
 
 on:
   push:
