@@ -19,8 +19,7 @@ jobs:
                 head_sha: '${{github.sha}}',
                 owner: '${{github.repository_owner}}',
                 repo: 'actions-checks-test',
-                status: 'completed',
-                conclusion: 'failure',
+                status: 'in_progress',
                 output: {
                   title: 'My Custom Mardkown Content',
                   summary: '### Hello World! :rocket:'
