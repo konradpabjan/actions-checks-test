@@ -23,7 +23,7 @@ jobs:
                 conclusion: 'success',
                 output: {
                   title: 'Custom Mardkown Content',
-                  summary: '#### Hello World! :rocket: \r\n- You can easily manually create check runs using GITHUB_TOKEN and something like actions/github-script@v4 \r\n- Full markdown is supported and we've seen users do some cool things with this ',
+                  summary: '#### Hello World! :rocket: \r\n- You can easily manually create check runs using GITHUB_TOKEN and something like actions/github-script@v4',
                 },
                 started_at: new Date()
             });
