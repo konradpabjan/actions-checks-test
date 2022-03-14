@@ -19,10 +19,13 @@ jobs:
                 head_sha: '${{github.sha}}',
                 owner: '${{github.repository_owner}}',
                 repo: 'actions-checks-test',
-                status: 'in_progress',
+                status: 'completed',
                 output: {
-                  title: 'My Custom Mardkown Content',
-                  summary: '### Hello World! :rocket:'
+                  title: 'Custom Mardkown Content',
+                  summary: '#### Hello World! :rocket: 
+                    - It's very easy to manually create check runs using GITHUB_TOKEN and something like actions/github-script@v4
+                    - While very useful
+                  '
                 },
                 started_at: new Date()
             });
