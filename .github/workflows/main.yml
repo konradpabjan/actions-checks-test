@@ -22,10 +22,7 @@ jobs:
                 status: 'completed',
                 output: {
                   title: 'Custom Mardkown Content',
-                  summary: '#### Hello World! :rocket: 
-                    - It's very easy to manually create check runs using GITHUB_TOKEN and something like actions/github-script@v4
-                    - While very useful
-                  '
+                  summary: '#### Hello World! :rocket: \n- It's very easy to manually create check runs using GITHUB_TOKEN and something like actions/github-script@v4\n- While very useful'
                 },
                 started_at: new Date()
             });
