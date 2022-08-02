@@ -91,20 +91,6 @@ jobs:
                 conclusion: 'skipped',
                 started_at: new Date()
             });
-            
-      - name: Stale
-        uses: actions/github-script@v4
-        with:
-          script: |
-            github.checks.create({
-                name: 'Stale',
-                head_sha: '${{github.sha}}',
-                owner: '${{github.repository_owner}}',
-                repo: 'actions-checks-test',
-                status: 'completed',
-                conclusion: 'stale',
-                started_at: new Date()
-            });
                  
       - name: Timed out
         uses: actions/github-script@v4
