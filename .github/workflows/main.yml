@@ -6,16 +6,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  example:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Manually create success
+      - name: Success
         uses: actions/github-script@v4
         with:
           script: |
             github.checks.create({
-                name: 'Custom output',
+                name: 'Success',
                 head_sha: '${{github.sha}}',
                 owner: '${{github.repository_owner}}',
                 repo: 'actions-checks-test',
@@ -28,7 +28,7 @@ jobs:
         with:
           script: |
             github.checks.create({
-                name: 'Custom output',
+                name: 'Failure',
                 head_sha: '${{github.sha}}',
                 owner: '${{github.repository_owner}}',
                 repo: 'actions-checks-test',
@@ -41,12 +41,82 @@ jobs:
         with:
           script: |
             github.checks.create({
-                name: 'Custom output',
+                name: 'Action required',
                 head_sha: '${{github.sha}}',
                 owner: '${{github.repository_owner}}',
                 repo: 'actions-checks-test',
                 status: 'completed',
                 conclusion: 'action_required',
+                started_at: new Date()
+            });
+            
+      - name: Cancelled
+        uses: actions/github-script@v4
+        with:
+          script: |
+            github.checks.create({
+                name: 'Cancelled',
+                head_sha: '${{github.sha}}',
+                owner: '${{github.repository_owner}}',
+                repo: 'actions-checks-test',
+                status: 'completed',
+                conclusion: 'cancelled',
+                started_at: new Date()
+            });
+            
+      - name: Neutral
+        uses: actions/github-script@v4
+        with:
+          script: |
+            github.checks.create({
+                name: 'Neutral',
+                head_sha: '${{github.sha}}',
+                owner: '${{github.repository_owner}}',
+                repo: 'actions-checks-test',
+                status: 'completed',
+                conclusion: 'neutral',
+                started_at: new Date()
+            });
+      
+      - name: Skipped
+        uses: actions/github-script@v4
+        with:
+          script: |
+            github.checks.create({
+                name: 'Skipped',
+                head_sha: '${{github.sha}}',
+                owner: '${{github.repository_owner}}',
+                repo: 'actions-checks-test',
+                status: 'completed',
+                conclusion: 'skipped',
+                started_at: new Date()
+            });
+            
+      - name: Stale
+        uses: actions/github-script@v4
+        with:
+          script: |
+            github.checks.create({
+                name: 'Stale',
+                head_sha: '${{github.sha}}',
+                owner: '${{github.repository_owner}}',
+                repo: 'actions-checks-test',
+                status: 'completed',
+                conclusion: 'stale',
+                started_at: new Date()
+            });
+                 
+      - name: Timed out
+        uses: actions/github-script@v4
+        with:
+          script: |
+            github.checks.create({
+                name: 'Timed out',
+                head_sha: '${{github.sha}}',
+                owner: '${{github.repository_owner}}',
+                repo: 'actions-checks-test',
+                status: 'completed',
+                conclusion: 'timed_out',
                 started_at: new Date()
             });
             
