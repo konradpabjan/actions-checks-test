@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Broken Link Checker
+name: Push commit
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -23,17 +23,12 @@ jobs:
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo Hello, world!
-  
-    - name: Sleep
-      run: |
-        echo "just do it!"
-        sleep 10
         
-    - name: Create report file
+    - name: Push some commit
       run: |
-        echo "test" > report.txt
+        echo "test" > test.txt
         git add --all
-    - name: Commit report
+    - name: Commit file
       run: |
         git config --global user.email "konradpabjan@github.com"
         git config --global user.name "konradpabjan"
