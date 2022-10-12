@@ -30,10 +30,12 @@ jobs:
         sleep 10
         
     - name: Create report file
-      run: echo "test" > report.txt
+      run: |
+        echo "test" > report.txt
+        git add --all
     - name: Commit report
       run: |
         git config --global user.email "konradpabjan@github.com"
         git config --global user.name "konradpabjan"
-        git commit -am "Automated report"
+        git commit -m "Test"
         git push
