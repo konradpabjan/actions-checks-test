@@ -8,10 +8,4 @@ Test
 
 Test
 
-Test
-
-test
-
-testing
-
-test1
+Testing some PR with required status checks
