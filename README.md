@@ -12,6 +12,4 @@ Test
 
 test
 
-testing
-
-test1
+Testing required status check
