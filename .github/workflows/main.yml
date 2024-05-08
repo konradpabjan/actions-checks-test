@@ -25,6 +25,14 @@ jobs:
                 output: {
                   title: "check title",
                   summary: "summary",
+                  annotations: [{
+                    "path": "README.md",
+              			"start_line": 1,
+              			"start_column": 1,
+              			"end_column": 2,
+              			"annotation_level": "warning",
+              			"message": "message"
+                  }],
                 },
             });
       - name: Failure
