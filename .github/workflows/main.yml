@@ -21,7 +21,11 @@ jobs:
                 repo: 'actions-checks-test',
                 status: 'completed',
                 conclusion: 'success',
-                started_at: new Date()
+                started_at: new Date(),
+                output: {
+                  title: "check title",
+                  summary: "summary",
+                },
             });
       - name: Failure
         uses: actions/github-script@v5
