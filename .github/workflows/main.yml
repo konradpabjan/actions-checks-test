@@ -24,8 +24,8 @@ jobs:
                 started_at: new Date(),
                 output: {
                   title: "Build client result for ok to test",
-                  summary: "https://github.com/" + process.env.repository + "/actions/runs/" + process.env.run_id
-                }
+                  summary: "summary",
+                },
             });
       - name: Failure
         uses: actions/github-script@v7
@@ -39,6 +39,5 @@ jobs:
                 status: 'completed',
                 conclusion: 'failure',
                 started_at: new Date(),
-                
             });
 
