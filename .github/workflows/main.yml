@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Success
-        uses: actions/github-script@v7
+        uses: actions/github-script@v5
         with:
           script: |
             github.checks.create({
@@ -21,14 +21,10 @@ jobs:
                 repo: 'actions-checks-test',
                 status: 'completed',
                 conclusion: 'success',
-                started_at: new Date(),
-                output: {
-                  title: "Build client result for ok to test",
-                  summary: "summary",
-                },
+                started_at: new Date()
             });
       - name: Failure
-        uses: actions/github-script@v7
+        uses: actions/github-script@v5
         with:
           script: |
             github.checks.create({
@@ -38,6 +34,5 @@ jobs:
                 repo: 'actions-checks-test',
                 status: 'completed',
                 conclusion: 'failure',
-                started_at: new Date(),
+                started_at: new Date()
             });
-
