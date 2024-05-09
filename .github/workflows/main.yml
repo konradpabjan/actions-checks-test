@@ -32,9 +32,10 @@ jobs:
                   summary: "summary",
                   annotations: [{
                     "path": "README.md",
-              			"end_line": 1,
-              			"start_column": 2,
-                    "end_column": 3,
+                    "start_line": NaN,
+              			"end_line": NaN,
+              			"start_column": 0,
+                    "end_column": 0,
               			"annotation_level": "warning",
               			"message": "message"
                   }],
