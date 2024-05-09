@@ -32,7 +32,6 @@ jobs:
                   summary: "summary",
                   annotations: [{
                     "path": "README.md",
-              			"start_line": 1,
               			"end_line": 1,
               			"start_column": 2,
                     "end_column": 3,
