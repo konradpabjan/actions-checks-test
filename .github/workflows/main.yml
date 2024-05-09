@@ -22,6 +22,11 @@ jobs:
                 status: 'completed',
                 conclusion: 'success',
                 started_at: new Date(),
+                actions: [{
+              			label: "testing",
+              			description: "my description",
+              			identifier: "abdefg"
+              	}],
                 output: {
                   title: "check title",
                   summary: "summary",
@@ -30,21 +35,9 @@ jobs:
               			"start_line": 1,
               			"end_line": 1,
               			"start_column": 2,
+                    "end_column": 3,
               			"annotation_level": "warning",
               			"message": "message"
                   }],
                 },
-            });
-      - name: Failure
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.rest.checks.create({
-                name: 'Failure',
-                head_sha: '${{github.sha}}',
-                owner: '${{github.repository_owner}}',
-                repo: 'actions-checks-test',
-                status: 'completed',
-                conclusion: 'failure',
-                started_at: new Date()
             });
