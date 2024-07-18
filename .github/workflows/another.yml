@@ -7,6 +7,8 @@ name: Another Workflow
 on:
   push:
   workflow_dispatch:
+  check_run: 
+    types: [rerequested, completed]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -23,7 +25,6 @@ jobs:
       
     # This workflow contains a single job called "build"
   test:
-    name: "build"
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
