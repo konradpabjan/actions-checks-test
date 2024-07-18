@@ -8,7 +8,7 @@ on:
   push:
   workflow_dispatch:
   check_run: 
-    types: [rerequested, completed]
+    types: [rerequested]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
