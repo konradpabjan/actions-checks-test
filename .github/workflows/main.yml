@@ -1,4 +1,3 @@
-
 name: Manual Check Run
 
 on:
@@ -21,23 +20,8 @@ jobs:
                 repo: 'actions-checks-test',
                 status: 'completed',
                 conclusion: 'success',
-                started_at: new Date(),
-                actions: [{
-              			label: "testing",
-              			description: "my description",
-              			identifier: "abdefg"
-              	}],
                 output: {
                   title: "check title",
-                  summary: "summary",
-                  annotations: [{
-                    "path": "README.md",
-                    "start_line": NaN,
-              			"end_line": NaN,
-              			"start_column": 0,
-                    "end_column": 0,
-              			"annotation_level": "warning",
-              			"message": "message"
-                  }],
+                  summary: "summary"
                 },
             });
