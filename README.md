@@ -13,3 +13,5 @@ Testing some PR with required status checks
 Test PR
 
 New PR
+
+New commit
