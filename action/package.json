@@ -18,6 +18,6 @@
   "homepage": "https://github.com/konradpabjan/actions-checks-test#readme",
   "dependencies": {
     "@actions/core": "^1.2.4",
-    "@actions/github": "^3.0.0"
+    "@actions/github": "^6.0.0"
   }
 }
